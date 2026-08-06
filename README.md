@@ -1,4 +1,3 @@
-````md
 # Abdulhadi's Portfolio
 
 A personal portfolio website showcasing my journey as a Computer Science student, along with my projects, skills, and achievements. The website is completely handcrafted using HTML and CSS with a nature-inspired design centered around a tree representing my growth as a developer.
@@ -38,8 +37,6 @@ Instead of relying on templates or website builders, every section has been desi
 ---
 
 ## Project Structure
-
-```
 Portfolio/
 │
 ├── css/
@@ -57,9 +54,7 @@ Portfolio/
 ├── assets/
 │
 └── README.md
-```
-
----
+text---
 
 ## Design Philosophy
 
@@ -97,4 +92,3 @@ GitHub: https://github.com/Abdulhadi-firefly-26
 ---
 
 If you like this project, consider giving it a ⭐ on GitHub.
-````
