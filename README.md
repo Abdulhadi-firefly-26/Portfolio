@@ -50,7 +50,7 @@ Portfolio/
 ├── textures/
 ├── assets/
 └── README.md
-
+```
 ## Design Philosophy
 
 The portfolio follows a nature-inspired theme.
