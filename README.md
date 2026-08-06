@@ -37,24 +37,19 @@ Instead of relying on templates or website builders, every section has been desi
 ---
 
 ## Project Structure
+```text
 Portfolio/
-│
 ├── css/
 │   ├── styles.css
 │   ├── project.css
 │   └── contact.css
-│
 ├── src/
 │   ├── index.html
 │   ├── project.html
 │   └── contact.html
-│
 ├── textures/
-│
 ├── assets/
-│
 └── README.md
-text---
 
 ## Design Philosophy
 
