@@ -3,23 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdulhadi | Contact me</title>
+    <title>Abdulhadi | Contact Me</title>
     <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
+
     <header class="navbar">
         <nav class="nav-links">
             <div class="bar">
-                <a href="#home" id="hb1"><div class="head_buttons">Home</div></a>
-                <a href="#ab" id="hb2"><div class="head_buttons">About</div></a>
-                <a href="#education" id="hb3"><div class="head_buttons">Education</div></a>
-                <a href="#projects" id="hb4"><div class="head_buttons">Projects</div></a>
-                <a href="#contact" id="hb5"><div class="head_buttons">Contact</div></a>
-            </div>    
+                <a href="index.html#home" id="hb1"><div class="head_buttons">Home</div></a>
+                <a href="index.html#ab" id="hb2"><div class="head_buttons">About</div></a>
+                <a href="index.html#education" id="hb3"><div class="head_buttons">Education</div></a>
+                <a href="index.html#projects" id="hb4"><div class="head_buttons">Projects</div></a>
+                <a href="contact.html" id="hb5"><div class="head_buttons">Contact</div></a>
+            </div>
         </nav>
     </header>
-    <div class="contact_me">
 
+    <div class="contact_me">
+        <p id="contact_heading"><i>Contact Me</i></p>
+        <div class="contact_container">
+            <div class="left_side">
+                <div class="contact_card">
+                    <img src="../textures/email.png" alt="Email" class="contact_icon">
+                    <div class="contact_info">
+                        <p class="title">Email</p>
+                        <p class="value">abdulhadi@example.com</p>
+                    </div>
+                </div>
+                <div class="contact_card">
+                    <img src="../textures/github.png" alt="Github" class="contact_icon">
+                    <div class="contact_info">
+                        <p class="title">GitHub</p>
+                        <a href="https://github.com/Abdulhadi-firefly-26" target="_blank">
+                            github.com/Abdulhadi-firefly-26
+                        </a>
+                    </div>
+                </div>
+                <div class="contact_card"><a href="#">
+                    <img src="../textures/linkedin.png" alt="LinkedIn" class="contact_icon">
+                    
+
+                    </a><div class="contact_info">
+                        <p class="title">LinkedIn</p>
+                        
+                            linkedin.com/in/abdulhadi
+                        </a>
+                    </div>
+                </div>
+                <div class="contact_card">
+                    <img src="../textures/location.png" alt="Location" class="contact_icon">
+                    <div class="contact_info">
+                        <p class="title">Location</p>
+                        <p class="value">
+                            Faisalabad, Pakistan
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right_side">
+                <p id="message_heading">Send Me a Message</p>
+                <form>
+                    <input type="text" placeholder="Your Name" class="input_box">
+                    <input type="email" placeholder="Your Email" class="input_box">
+                    <input type="text" placeholder="Subject" class="input_box">
+                    <textarea rows="8" placeholder="Write your message..." class="message_box"></textarea>
+                    <button type="submit" id="send_button">Send Message </button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
