@@ -81,3 +81,17 @@ header{
     color:#08120D;
         box-shadow: 0 0 35px 2px #a4f06e;
 }
+
+
+
+
+
+
+.contact_me{
+    background-color: #112019;
+    border: 3px solid #22C55E;
+    width: 70%;
+    height: 500px;
+    margin: 15%;
+    border-radius: 30px;
+}
