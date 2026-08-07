@@ -1,0 +1,292 @@
+/* ==========================================================================
+   1. BASE STYLES & RESET
+   ========================================================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#08120D;
+    color:#F8FAFC;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+    background-image: url(../textures/back2.png);
+    background-size: 25px 25px;
+    height: fit-content;
+}
+a{
+    text-decoration:none;
+    color:#F8FAFC;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width:100%;
+    height:80px;
+    background-color:#112019;
+    border-bottom:2px solid #22C55E;
+    padding: 0 15px; /* Added to keep buttons inside padding on tiny screens */
+}
+.bar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap; /* Allows navigation buttons to wrap on very small screens */
+}
+.head_buttons{
+    margin:5px; /* Reduced margin to help with spacing on mobile */
+    padding:10px 15px; /* Slightly reduced desktop padding */
+    background-color:#3a8321;
+    color:#F8FAFC;
+    border-radius: 50% 0% 50% 0%;
+    font-size:18px; /* Slightly smaller for flexibility */
+    animation: zoomout 3s infinite ease-in-out;
+}
+.head_buttons:hover{
+    background-color:#22C55E;
+    border-radius: 50% 0% 50% 0%;
+    color:#08120D;
+    box-shadow: 0 0 35px 2px #a4f06e;
+}
+
+/* Animations */
+@keyframes zoomin {
+  0% { border-color: #3a8321; transform: scale(1); }
+  50% { border-color: #7cfc00; transform: scale(1.1); }
+  100% { border-color: #3a8321; transform: scale(1); }
+}
+@keyframes zoomout {
+  0% { border-color: #3a8321; transform: scale(1); }
+  50% { border-color: #7cfc00; transform: scale(0.9); }
+  100% { border-color: #3a8321; transform: scale(1); }
+}
+
+/* ==========================================================================
+   3. CONTACT ME SECTION (DESKTOP LAID FIRST)
+   ========================================================================== */
+.contact_me
+{
+    min-height: 100vh;
+    width: 100%;
+    padding: 140px 20px 80px 20px; /* Changed 0 to 20px to prevent edge touching */
+    box-sizing: border-box;
+}
+#contact_heading
+{
+    text-align: center;
+    font-size: 65px;
+    color:#A3E635;
+    margin-bottom: 70px;
+    font-weight: bold;
+}
+.contact_container
+{
+    width: 100%;
+    max-width: 1100px; /* Stops stretching endlessly on big screens */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* Reduced from 60px to behave better on smaller desktops */
+}
+.left_side
+{
+    width: 45%; /* Adjusted for desktop balance */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact_card
+{
+    display: flex;
+    align-items: center;
+    background: #08120D;
+    backdrop-filter: blur(8px);
+    border: 2px solid #22C55E;
+    border-radius: 22px;
+    padding: 20px 25px;
+    transition: .3s;
+}
+.contact_card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+.contact_icon
+{
+    width: 55px;
+    height: 55px;
+    margin-right: 22px; 
+    border-radius: 30%;
+}
+.contact_info
+{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(32,83,46);
+    font-size: 18px;
+}
+.title
+{
+    font-size: 24px;
+    color: #2FD6A1;
+    margin: 0;
+    font-weight: bold;
+}
+.value
+{
+    font-size: 18px;
+    margin-top: 6px;
+    color: #F8FAFC; /* Fixed from hardcoded dark rgb(70,70,70) to contrast dark background */
+}
+.contact_info:hover
+{
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.right_side
+{
+    width: 50%; /* Adjusted for desktop balance */
+    background: #08120D;
+    border: 2px solid #22C55E;
+    border-radius: 25px;
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    box-sizing: border-box;
+}
+#message_heading
+{
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2FD6A1; /* Upgraded to bright color for better dark-theme contrast */
+    font-size: 38px;
+    font-weight: bold;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input_box
+{
+    height: 55px;
+    border-radius: 15px;
+    border: 2px solid rgb(60,120,75);
+    outline: none;
+    padding-left: 18px;
+    font-size: 18px;
+    background: black;
+    color: #7cfc00;
+    opacity: 0.8; /* Made slightly more readable */
+    width: 100%;
+}
+.message_box
+{
+    resize: none;
+    border-radius: 18px;
+    border: 2px solid rgb(60,120,75);
+    outline: none;
+    padding: 18px;
+    font-size: 18px;
+    background: black;
+    color: #7cfc00;
+    opacity: 0.8;
+}
+#send_button
+{
+    width: 100%; /* Adapts perfectly inside the card container */
+    max-width: 220px;
+    height: 58px;
+    margin: 15px auto 0 auto;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background: rgb(38,105,54);
+    transition: .3s;
+}
+#send_button:hover
+{
+    background: rgb(28,80,41);
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   4. MEDIA QUERY FOR TABLETS & LAPTOPS (Under 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .contact_container {
+        width: 95%;
+        gap: 25px;
+    }
+    #contact_heading {
+        font-size: 50px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .value {
+        font-size: 16px;
+    }
+}
+
+/* ==========================================================================
+   5. MEDIA QUERY FOR MOBILE DEVICES (Under 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 15px 10px;
+        position: relative; /* Prevents sticky nav covering headers on small mobile */
+    }
+    .contact_me {
+        padding: 50px 10px 40px 10px; /* Reduced padding since header isn't fixed on mobile */
+        min-height: auto;
+    }
+    #contact_heading {
+        font-size: 36px; /* Scaled down significantly so it fits mobile screens */
+        margin-bottom: 40px;
+    }
+    .contact_container {
+        flex-direction: column; /* Stacks left side and right side vertically */
+        width: 100%;
+        gap: 40px;
+    }
+    .left_side, .right_side {
+        width: 100%; /* Elements expand to take full responsive screen width */
+    }
+    .right_side {
+        padding: 25px 20px; /* Tighter block padding for narrow phone screens */
+    }
+    #message_heading {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .head_buttons {
+        font-size: 15px; /* Smaller header button fonts on mobile */
+        padding: 8px 12px;
+    }
+    .contact_card {
+        padding: 15px;
+    }
+    .contact_icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 15px;
+    }
+}

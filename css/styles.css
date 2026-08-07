@@ -65,22 +65,11 @@ header{
     color:#A3E635;
     font-size:80px;
 }
-@keyframes blink {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
-}
-
 #name{
     color:#F8FAFC;
     font-size:40px;
     margin-top:10px;
 }
-#name::after {
-      content: "";
-      animation: 
-        type-delete-software 12s steps(1) infinite,
-        blink 3s step-end infinite;
-    }
 #welcome{
     color:#B6C2BD;
     font-size:22px;
