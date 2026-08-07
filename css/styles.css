@@ -65,100 +65,6 @@ header{
     color:#A3E635;
     font-size:80px;
 }
-@keyframes type-delete-software {
-  0%   { content: "_"; }
-  4%   { content: "s_"; }
-  8%   { content: "so_"; }
-  12%  { content: "sof_"; }
-  16%  { content: "soft_"; }
-  20%  { content: "softw_"; }
-  24%  { content: "softwa_"; }
-  28%  { content: "softwar_"; }
-  32%  { content: "software_"; }
-  36%  { content: "software _"; }
-  40%  { content: "software e_"; }
-  44%  { content: "software en_"; }
-  48%  { content: "software eng_"; }
-  52%  { content: "software engi_"; }
-  56%  { content: "software engin_"; }
-  60%  { content: "software engine_"; }
-  64%  { content: "software enginee_"; }
-  68%  { content: "software engineer_"; }
-  72%  { content: "software engineer_"; }
-  76%  { content: "software enginee_"; }
-  78%  { content: "software engine_"; }
-  80%  { content: "software engin_"; }
-  82%  { content: "software engi_"; }
-  84%  { content: "software eng_"; }
-  86%  { content: "software en_"; }
-  88%  { content: "software e_"; }
-  90%  { content: "software _"; }
-  92%  { content: "software_"; }
-  94%  { content: "softwar_"; }
-  95%  { content: "softwa_"; }
-  96%  { content: "softw_"; }
-  97%  { content: "soft_"; }
-  98%  { content: "sof_"; }
-  99%  { content: "so_"; }
-  100% { content: "_"; }
-}
-@keyframes type-delete-web {
-  0%   { content: "_"; }
-  5%   { content: "w_"; }
-  10%  { content: "we_"; }
-  15%  { content: "web_"; }
-  20%  { content: "web _"; }
-  25%  { content: "web d_"; }
-  30%  { content: "web de_"; }
-  35%  { content: "web dev_"; }
-  40%  { content: "web deve_"; }
-  45%  { content: "web devel_"; }
-  50%  { content: "web develo_"; }
-  55%  { content: "web develop_"; }
-  60%  { content: "web develope_"; }
-  65%  { content: "web developer_"; }
-  70%  { content: "web developer_"; }
-  74%  { content: "web develope_"; }
-  77%  { content: "web develop_"; }
-  80%  { content: "web develo_"; }
-  83%  { content: "web devel_"; }
-  86%  { content: "web deve_"; }
-  89%  { content: "web dev_"; }
-  91%  { content: "web de_"; }
-  93%  { content: "web d_"; }
-  95%  { content: "web _"; }
-  97%  { content: "web_"; }
-  98%  { content: "we_"; }
-  99%  { content: "w_"; }
-  100% { content: "_"; }
-}
-@keyframes type-delete-tech {
-  0%   { content: "_"; }
-  6%   { content: "t_"; }
-  12%  { content: "te_"; }
-  18%  { content: "tec_"; }
-  24%  { content: "tech_"; }
-  30%  { content: "tech _"; }
-  36%  { content: "tech l_"; }
-  42%  { content: "tech le_"; }
-  48%  { content: "tech lea_"; }
-  54%  { content: "tech lear_"; }
-  60%  { content: "tech learn_"; }
-  66%  { content: "tech learne_"; }
-  72%  { content: "tech learner_"; }
-  78%  { content: "tech learner_"; }
-  82%  { content: "tech learne_"; }
-  85%  { content: "tech learn_"; }
-  88%  { content: "tech lear_"; }
-  91%  { content: "tech lea_"; }
-  93%  { content: "tech le_"; }
-  95%  { content: "tech l_"; }
-  97%  { content: "tech _"; }
-  98%  { content: "tech_"; }
-  99%  { content: "tec_"; }
-  99.5%{ content: "te_"; }
-  100% { content: "_"; }
-}
 @keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: black; }
@@ -172,10 +78,8 @@ header{
 #name::after {
       content: "";
       animation: 
-        type-delete-software 3s steps(1) infinite,
-        type-delete-web 3s steps(1) infinite,
-        type-delete-tech 3s steps(1) infinite,
-        blink 3s step-end  infinite;
+        type-delete-software 12s steps(1) infinite,
+        blink 3s step-end infinite;
     }
 #welcome{
     color:#B6C2BD;
@@ -406,33 +310,32 @@ footer{
 @keyframes zoomin {
   0% {
     border-color: #3a8321;
-    transform: scale(1);
+    transform: scale(0.95);
   }
   50% {
     border-color: #7cfc00;
-    transform: scale(1.1); 
+    transform: scale(1); 
   }
   100% {
     border-color: #3a8321;
-    transform: scale(1);
+    transform: scale(0.95);
   }
 }
 @keyframes zoomout {
-  0% {
+  0%, 100%{
     border-color: #3a8321;
     transform: scale(1);
   }
   50% {
     border-color: #7cfc00;
-    transform: scale(0.9); 
-  }
-  100% {
-    border-color: #3a8321;
-    transform: scale(1);
+    transform: scale(0.95); 
   }
 }
-.head_buttons {
-  animation: zoomin 3s infinite ease-in-out;
+#Project{
+    animation: zoomin 3s infinite ease-in-out;
+}
+#contact{
+    animation: zoomout 3s infinite ease-in-out;
 }
 @keyframes vibrate{
     0%{
@@ -480,8 +383,8 @@ footer{
 #me_img{
   animation: zoomin 5s infinite ease-in-out;
 }
-.intro_buttons{
-    animation: zoomout 5s infinite ease-in-out;
+.head_buttons{
+    animation: vibrate 5s infinite ease-in-out;
 }
 
 
