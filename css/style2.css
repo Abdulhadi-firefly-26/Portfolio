@@ -432,7 +432,10 @@ footer{
         padding: 30px 20px; 
     }
     .card{
-        width: 70vw;
+        width: 40vw;
         max-height: 40vh;
+    }
+    #projects{
+        height: fit-content;
     }
 }
