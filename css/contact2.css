@@ -290,6 +290,8 @@ form
     }
     .contact_card {
         padding: 15px;
+        max-height: 75vw;
+        max-height: 40vh;
     }
     .contact_icon {
         width: 45px;
