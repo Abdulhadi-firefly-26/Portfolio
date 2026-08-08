@@ -434,6 +434,8 @@ footer{
     .card{
         width: 40vw;
         max-height: 40vh;
+        background-image: url("../textures/back2.png");
+        background-size: 25px 25px;
     }
     #projects{
         height: fit-content;
