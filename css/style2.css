@@ -432,7 +432,7 @@ footer{
         padding: 30px 20px; 
     }
     .card{
-        max-width: 60%;
-        max-height: 40%;
+        width: 70vw;
+        max-height: 40vh;
     }
 }
