@@ -43,3 +43,16 @@ setInterval(() => {
     else
         name.textContent += "_";
 }, 500);
+
+
+
+const cards = document.querySelector(".cards");
+
+cards.addEventListener("wheel", function (event) {
+    event.preventDefault();
+
+    cards.scrollBy({
+        left: event.deltaY,
+        behavior: "smooth"
+    });
+}, { passive: false });
