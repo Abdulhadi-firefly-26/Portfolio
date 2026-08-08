@@ -431,4 +431,8 @@ footer{
     #about { 
         padding: 30px 20px; 
     }
+    .card{
+        max-width: 60%;
+        max-height: 40%;
+    }
 }
